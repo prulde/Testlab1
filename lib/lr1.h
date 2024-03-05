@@ -6,6 +6,7 @@
 
 struct Res
 {
+	bool sizeChanged = false;
 	std::vector<int> result;
 	int min = INT_MAX;
 	std::vector<std::string> errors;
@@ -13,6 +14,5 @@ struct Res
 
 const std::string oversized = "oversized";
 const std::string overflow = "overflow";
-const std::string underflow = "underflow";
 
 Res countAndSum(const std::vector<int> &array);

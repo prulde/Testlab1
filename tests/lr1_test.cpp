@@ -5,7 +5,7 @@
 
 // Подробнее https://google.github.io/googletest/reference/testing.html
 
-class CountAndSumTest : public ::testing::Test {
+class LR1T : public ::testing::Test {
 protected:
     void SetUp() override {
         arr = {10, 14, 15, 20, 21, 25, 30};
@@ -18,7 +18,7 @@ protected:
     std::vector<int> arr;
 };
 
-TEST_F(CountAndSumTest, CTest1) {
+TEST_F(LR1T, CTest1) {
     Res output = countAndSum(arr);
 
     std::vector<int> outputTest = { 31, 39, 45, 40 };
@@ -26,11 +26,13 @@ TEST_F(CountAndSumTest, CTest1) {
     EXPECT_EQ(output.result, outputTest);
 }
 
-TEST_F(CountAndSumTest, CTest2) {
-    Res output = countAndSum(arr);
-    std::vector<int> outputTest = { 31, 39, 45, 40 };
-    EXPECT_EQ(output.min, 31);
-    EXPECT_EQ(output.result, outputTest);
+TEST_F(LR1T, Path2) {
+    std::vector<int> out = { 62 };
+    std::vector<int> in = { 31 };
+    Res output = countAndSum(in);
+    if(output.sizeChanged)
+        EXPECT_EQ(output.min, 62);
+    EXPECT_EQ(output.result, out);
 }
 
 TEST(CountAndSumTest1, CTest3) {
