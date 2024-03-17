@@ -19,7 +19,7 @@ Res countAndSum(const std::vector<int> &array)
 		int pos = half + i + mod;
 		int sum = INT_MAX;
 
-		long long c = (long long)array[i] + array[pos];
+		long long c = (long long)array[i] + (long long)array[pos];
 		if (c > INT_MAX || c < INT_MIN)
 		{
 			output.errors.push_back(overflow);
@@ -38,7 +38,7 @@ Res countAndSum(const std::vector<int> &array)
 	if (mod == 1)
 	{
 		int sum = INT_MAX;
-		long long c = (long long)array[half] + array[half];
+		long long c = (long long)array[half] + (long long)array[half];
 		if (c > INT_MAX || c < INT_MIN)
 		{
 			output.errors.push_back(overflow);
