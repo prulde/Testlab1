@@ -125,6 +125,5 @@ TEST_F(LR1T, SPath10range260) {
     std::vector<int> in = read_file("../../../../data/path10r260.txt");
     std::vector<int> out = read_file("../../../../data/path10r260res.txt");
     Res output = countAndSum(in);
-    std::cout << output.result[output.result.size()-1];
     EXPECT_EQ(output.result, out);
 }
