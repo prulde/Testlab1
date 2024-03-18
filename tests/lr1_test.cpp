@@ -27,27 +27,8 @@ std::vector<int> read_file(std::string path)
 
 class LR1T : public ::testing::Test
 {
-protected:
-	void SetUp() override
-	{
-		arr = {10, 14, 15, 20, 21, 25, 30};
-	}
 
-	void TearDown() override
-	{
-		arr.clear();
-	}
-
-	std::vector<int> arr;
 };
-//
-// TEST_F(LR1T, CTest1) {
-//    Res output = countAndSum(arr);
-//
-//    std::vector<int> outputTest = { 31, 39, 45, 40 };
-//    EXPECT_EQ(output.min, 31);
-//    EXPECT_EQ(output.result, outputTest);
-//}
 
 TEST_F(LR1T, SPath1)
 {
@@ -139,6 +120,46 @@ TEST_F(LR1T, SPath10range260)
 {
 	std::vector<int> in = read_file("../../../../data/path10r260.txt");
 	std::vector<int> out = read_file("../../../../data/path10r260res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range312)
+{
+	std::vector<int> in = read_file("../../../../data/path10r312.txt");
+	std::vector<int> out = read_file("../../../../data/path10r312res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range364)
+{
+	std::vector<int> in = read_file("../../../../data/path10r364.txt");
+	std::vector<int> out = read_file("../../../../data/path10r364res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range416)
+{
+	std::vector<int> in = read_file("../../../../data/path10r416.txt");
+	std::vector<int> out = read_file("../../../../data/path10r416res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range468)
+{
+	std::vector<int> in = read_file("../../../../data/path10r468.txt");
+	std::vector<int> out = read_file("../../../../data/path10r468res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range520)
+{
+	std::vector<int> in = read_file("../../../../data/path10r520.txt");
+	std::vector<int> out = read_file("../../../../data/path10r520res.txt");
 	Res output = countAndSum(in);
 	EXPECT_EQ(output.result, out);
 }
