@@ -203,3 +203,117 @@ TEST_F(LR1T, SPath10range785)
 	Res output = countAndSum(in);
 	EXPECT_EQ(output.result, out);
 }
+
+
+TEST_F(LR1T, SPath10range838)
+{
+	std::vector<int> in = read_file("../../../../data/path10r838.txt");
+	std::vector<int> out = read_file("../../../../data/path10r838res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range891)
+{
+	std::vector<int> in = read_file("../../../../data/path10r891.txt");
+	std::vector<int> out = read_file("../../../../data/path10r891res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range944)
+{
+	std::vector<int> in = read_file("../../../../data/path10r944.txt");
+	std::vector<int> out = read_file("../../../../data/path10r944res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range997)
+{
+	std::vector<int> in = read_file("../../../../data/path10r997.txt");
+	std::vector<int> out = read_file("../../../../data/path10r997res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, KIbegin)
+{
+	std::vector<int> in = { -1858816376,
+- 858775419,
+536953433,
+415759671,
+549826788,
+- 288050195,
+- 738014828,
+944056608,
+- 948787325,
+- 10190872,
+- 12224567,
+115356241,
+- 322764382,
+- 185427050,
+- 1045043572,
+- 126635443,
+- 818764297,
+749026972,
+- 764896377
+	};
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.min, -1871040943);
+}
+
+TEST_F(LR1T, KImid)
+{
+	std::vector<int> in = { -1001329711,
+879945867,
+937759885,
+229506197,
+- 889869444,
+844017938,
+- 864733033,
+- 60838666,
+745927765,
+17455918,
+- 191218999,
+132557486,
+675845853,
+737146307,
+- 354008736,
+347327088,
+391992787,
+- 480163850,
+- 505620406,
+- 619748173,
+	};
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.min, -1243878180);
+}
+
+TEST_F(LR1T, KIend)
+{
+	std::vector<int> in = { -858816376,
+-858775419,
+536953433,
+415759671,
+549826788,
+-288050195,
+-738014828,
+944056608,
+-948787325,
+-1019092872,
+12224567,
+115356241,
+-322764382,
+-185427050,
+-1045043572,
+-126635443,
+-818764297,
+749026972,
+-764896377,
+
+	};
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.min, -2038185744
+	);
+}
