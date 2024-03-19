@@ -163,3 +163,43 @@ TEST_F(LR1T, SPath10range520)
 	Res output = countAndSum(in);
 	EXPECT_EQ(output.result, out);
 }
+
+TEST_F(LR1T, SPath10range573)
+{
+	std::vector<int> in = read_file("../../../../data/path10r573.txt");
+	std::vector<int> out = read_file("../../../../data/path10r573res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range626)
+{
+	std::vector<int> in = read_file("../../../../data/path10r626.txt");
+	std::vector<int> out = read_file("../../../../data/path10r626res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range679)
+{
+	std::vector<int> in = read_file("../../../../data/path10r679.txt");
+	std::vector<int> out = read_file("../../../../data/path10r679res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range732)
+{
+	std::vector<int> in = read_file("../../../../data/path10r732.txt");
+	std::vector<int> out = read_file("../../../../data/path10r732res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
+
+TEST_F(LR1T, SPath10range785)
+{
+	std::vector<int> in = read_file("../../../../data/path10r785.txt");
+	std::vector<int> out = read_file("../../../../data/path10r785res.txt");
+	Res output = countAndSum(in);
+	EXPECT_EQ(output.result, out);
+}
